@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>TARGET MULTIBRAND CAR SERVICE</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+<div class="brand">
+
+<img src="logo.png" class="logo">
+
+TARGET MULTIBRAND CAR SERVICE
+
+</div>
+
+<div>
+
+Mechanic Software
+
+</div>
+
+</div>
+
+<div class="container">
+
+<div class="left-panel">
+
+<h3>Customer Details</h3>
+
+<input id="customerName" placeholder="Customer Name">
+
+<input id="phone" placeholder="Phone Number">
+
+<input id="vehicleNo" placeholder="Vehicle Number">
+
+<textarea placeholder="Address"></textarea>
+
+<button onclick="goToHistory()">View Old Bills</button>
+
+</div>
+
+<div class="right-panel">
+
+<h3>Inventory & Billing</h3>
+
+<select id="category" onchange="loadItems()">
+<option value="">Select Category</option>
+</select>
+
+<select id="itemSelect" onchange="fillSelectedItem()">
+<option value="">Select Item</option>
+</select>
+
+<input type="text" id="itemInput" placeholder="Item Name">
+
+<input type="number" id="qty" value="1" placeholder="Qty">
+
+<input type="number" id="price" placeholder="Price">
+
+<button onclick="addItem()">Add Item</button>
+
+<table id="billTable">
+
+<thead>
+<tr>
+<th>Item</th>
+<th>Qty</th>
+<th>Price</th>
+<th>Total</th>
+<th>Remove</th>
+</tr>
+</thead>
+
+<tbody>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+<div class="total-section">
+
+<p>Subtotal : ₹ <span id="subtotal">0</span></p>
+
+<input type="number" id="labour" placeholder="Labour Charge">
+
+<input type="number" id="discount" placeholder="Discount">
+
+<h2>Grand Total : ₹ <span id="grandTotal">0</span></h2>
+
+<div class="btn-group">
+
+<button onclick="saveBill()">Save Bill</button>
+
+<button onclick="printInvoice()">Print</button>
+
+<button onclick="downloadPDF()">Download PDF</button>
+
+</div>
+
+</div>
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<script src="invoice.js"></script>
+<script src="script.js"></script>
+</body>
+
+</html>

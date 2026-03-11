@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Bill History - Target Billing</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f5f5f5;
+padding:40px;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+h1{
+text-align:center;
+margin-bottom:20px;
+}
+
+.search-bar{
+margin-bottom:20px;
+}
+
+.search-bar input{
+padding:10px;
+width:300px;
+border-radius:6px;
+border:1px solid #ccc;
+font-size:14px;
+}
+
+button{
+padding:10px 15px;
+border:none;
+background:#c9997e;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#b9876a;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+th,td{
+border:1px solid #ddd;
+padding:10px;
+text-align:center;
+}
+
+th{
+background:#c9997e;
+color:white;
+}
+
+.actions button{
+margin:2px;
+}
+
+.back{
+margin-top:20px;
+}
+
+</style>
+
+</head>
+
+
+<body onload="loadHistoryPage()">
+
+<div class="container">
+
+<h1>Bill History</h1>
+
+<div class="search-bar">
+
+<input 
+type="text"
+id="searchPhone"
+placeholder="Search phone / customer / vehicle"
+onkeyup="filterBills()">
+
+</div>
+
+
+<table id="historyTable">
+
+<thead>
+<tr>
+<th>Bill No</th>
+<th>Date</th>
+<th>Customer</th>
+<th>Total</th>
+<th>Actions</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td colspan="5">No Bills Found</td>
+</tr>
+</tbody>
+
+</table>
+
+<div class="back">
+<button onclick="goBack()">⬅ Back to Billing</button>
+</div>
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<script src="invoice.js"></script>
+<script src="script.js"></script>
+
+</html>

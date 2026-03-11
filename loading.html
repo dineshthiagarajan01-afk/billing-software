@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.loading-screen{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+gap:20px;
+background:var(--powder-petal);
+}
+
+.gear{
+width:80px;
+height:80px;
+border:8px solid var(--light-bronze);
+border-radius:50%;
+border-top:8px solid var(--dusty-olive);
+animation:spin 1.2s linear infinite;
+}
+
+@keyframes spin{
+0%{transform:rotate(0deg)}
+100%{transform:rotate(360deg)}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="loading-screen">
+
+<img src="logo.png" width="80">
+
+<h1>Target Billing</h1>
+
+<div class="gear"></div>
+
+<p>Loading System...</p>
+
+</div>
+
+<script>
+
+setTimeout(()=>{
+window.location.href="index.html"
+},2000)
+
+</script>
+
+</body>
+</html>
